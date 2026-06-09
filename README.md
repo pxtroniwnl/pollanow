@@ -80,8 +80,11 @@ curl -X POST http://localhost:3000/api/cron/sync \
 1. Importa el repo en [vercel.com](https://vercel.com).
 2. Agrega **todas** las variables de `.env.example` en Project → Settings →
    Environment Variables.
-3. `vercel.json` ya define el Cron (`*/5 * * * *`). Vercel añade solo la
-   cabecera `Authorization: Bearer $CRON_SECRET` a las llamadas del cron.
+3. `vercel.json` define un Cron **diario** (`0 12 * * *`) — el máximo que
+   permite el plan Hobby. Vercel añade solo la cabecera
+   `Authorization: Bearer $CRON_SECRET` a las llamadas del cron. Para
+   actualizaciones cada pocos minutos durante los partidos, usa el cron externo
+   de la nota de abajo.
 4. Deploy. Abre la URL en PC y móvil.
 
 > **Frecuencia del Cron:** el plan **Hobby** de Vercel limita los crons (≈1/día).
