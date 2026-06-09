@@ -1,0 +1,949 @@
+{
+  "groups": [
+    {
+      "id": "A",
+      "name": "Grupo A"
+    },
+    {
+      "id": "B",
+      "name": "Grupo B"
+    },
+    {
+      "id": "C",
+      "name": "Grupo C"
+    },
+    {
+      "id": "D",
+      "name": "Grupo D"
+    },
+    {
+      "id": "E",
+      "name": "Grupo E"
+    },
+    {
+      "id": "F",
+      "name": "Grupo F"
+    },
+    {
+      "id": "G",
+      "name": "Grupo G"
+    },
+    {
+      "id": "H",
+      "name": "Grupo H"
+    },
+    {
+      "id": "I",
+      "name": "Grupo I"
+    },
+    {
+      "id": "J",
+      "name": "Grupo J"
+    },
+    {
+      "id": "K",
+      "name": "Grupo K"
+    },
+    {
+      "id": "L",
+      "name": "Grupo L"
+    }
+  ],
+  "teams": [
+    {
+      "code": "CHEQUIA",
+      "name": "Chequia",
+      "group": "A",
+      "flag": "🇨🇿",
+      "elo": 1790
+    },
+    {
+      "code": "COREA",
+      "name": "Corea del Sur",
+      "group": "A",
+      "flag": "🇰🇷",
+      "elo": 1740
+    },
+    {
+      "code": "MEXICO",
+      "name": "México",
+      "group": "A",
+      "flag": "🇲🇽",
+      "elo": 1700
+    },
+    {
+      "code": "SUDAFRICA",
+      "name": "Sudáfrica",
+      "group": "A",
+      "flag": "🇿🇦",
+      "elo": 1620
+    },
+    {
+      "code": "BOSNIA",
+      "name": "Bosnia",
+      "group": "B",
+      "flag": "🇧🇦",
+      "elo": 1680
+    },
+    {
+      "code": "CANADA",
+      "name": "Canadá",
+      "group": "B",
+      "flag": "🇨🇦",
+      "elo": 1730
+    },
+    {
+      "code": "QATAR",
+      "name": "Catar",
+      "group": "B",
+      "flag": "🇶🇦",
+      "elo": 1560
+    },
+    {
+      "code": "SUIZA",
+      "name": "Suiza",
+      "group": "B",
+      "flag": "🇨🇭",
+      "elo": 1850
+    },
+    {
+      "code": "BRASIL",
+      "name": "Brasil",
+      "group": "C",
+      "flag": "🇧🇷",
+      "elo": 2010
+    },
+    {
+      "code": "ESCOCIA",
+      "name": "Escocia",
+      "group": "C",
+      "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "elo": 1740
+    },
+    {
+      "code": "HAITI",
+      "name": "Haití",
+      "group": "C",
+      "flag": "🇭🇹",
+      "elo": 1500
+    },
+    {
+      "code": "MARRUECOS",
+      "name": "Marruecos",
+      "group": "C",
+      "flag": "🇲🇦",
+      "elo": 1860
+    },
+    {
+      "code": "AUSTRALIA",
+      "name": "Australia",
+      "group": "D",
+      "flag": "🇦🇺",
+      "elo": 1730
+    },
+    {
+      "code": "EEUU",
+      "name": "Estados Unidos",
+      "group": "D",
+      "flag": "🇺🇸",
+      "elo": 1770
+    },
+    {
+      "code": "PARAGUAY",
+      "name": "Paraguay",
+      "group": "D",
+      "flag": "🇵🇾",
+      "elo": 1700
+    },
+    {
+      "code": "TURQUIA",
+      "name": "Turquía",
+      "group": "D",
+      "flag": "🇹🇷",
+      "elo": 1820
+    },
+    {
+      "code": "ALEMANIA",
+      "name": "Alemania",
+      "group": "E",
+      "flag": "🇩🇪",
+      "elo": 1960
+    },
+    {
+      "code": "CDMARFIL",
+      "name": "Costa de Marfil",
+      "group": "E",
+      "flag": "🇨🇮",
+      "elo": 1760
+    },
+    {
+      "code": "CURAZAO",
+      "name": "Curazao",
+      "group": "E",
+      "flag": "🇨🇼",
+      "elo": 1530
+    },
+    {
+      "code": "ECUADOR",
+      "name": "Ecuador",
+      "group": "E",
+      "flag": "🇪🇨",
+      "elo": 1810
+    },
+    {
+      "code": "HOLANDA",
+      "name": "Países Bajos",
+      "group": "F",
+      "flag": "🇳🇱",
+      "elo": 1980
+    },
+    {
+      "code": "JAPON",
+      "name": "Japón",
+      "group": "F",
+      "flag": "🇯🇵",
+      "elo": 1850
+    },
+    {
+      "code": "SUECIA",
+      "name": "Suecia",
+      "group": "F",
+      "flag": "🇸🇪",
+      "elo": 1760
+    },
+    {
+      "code": "TUNEZ",
+      "name": "Túnez",
+      "group": "F",
+      "flag": "🇹🇳",
+      "elo": 1690
+    },
+    {
+      "code": "BELGICA",
+      "name": "Bélgica",
+      "group": "G",
+      "flag": "🇧🇪",
+      "elo": 1930
+    },
+    {
+      "code": "EGIPTO",
+      "name": "Egipto",
+      "group": "G",
+      "flag": "🇪🇬",
+      "elo": 1730
+    },
+    {
+      "code": "IRAN",
+      "name": "Irán",
+      "group": "G",
+      "flag": "🇮🇷",
+      "elo": 1800
+    },
+    {
+      "code": "NZELANDA",
+      "name": "Nueva Zelanda",
+      "group": "G",
+      "flag": "🇳🇿",
+      "elo": 1520
+    },
+    {
+      "code": "CABOVERDE",
+      "name": "Cabo Verde",
+      "group": "H",
+      "flag": "🇨🇻",
+      "elo": 1620
+    },
+    {
+      "code": "ESPAÑA",
+      "name": "España",
+      "group": "H",
+      "flag": "🇪🇸",
+      "elo": 2050
+    },
+    {
+      "code": "SAUDITA",
+      "name": "Arabia Saudita",
+      "group": "H",
+      "flag": "🇸🇦",
+      "elo": 1640
+    },
+    {
+      "code": "URUGUAY",
+      "name": "Uruguay",
+      "group": "H",
+      "flag": "🇺🇾",
+      "elo": 1900
+    },
+    {
+      "code": "FRANCIA",
+      "name": "Francia",
+      "group": "I",
+      "flag": "🇫🇷",
+      "elo": 2040
+    },
+    {
+      "code": "IRAK",
+      "name": "Irak",
+      "group": "I",
+      "flag": "🇮🇶",
+      "elo": 1640
+    },
+    {
+      "code": "NORUEGA",
+      "name": "Noruega",
+      "group": "I",
+      "flag": "🇳🇴",
+      "elo": 1820
+    },
+    {
+      "code": "SENEGAL",
+      "name": "Senegal",
+      "group": "I",
+      "flag": "🇸🇳",
+      "elo": 1860
+    },
+    {
+      "code": "ARGELIA",
+      "name": "Argelia",
+      "group": "J",
+      "flag": "🇩🇿",
+      "elo": 1780
+    },
+    {
+      "code": "ARGENTINA",
+      "name": "Argentina",
+      "group": "J",
+      "flag": "🇦🇷",
+      "elo": 2100
+    },
+    {
+      "code": "AUSTRIA",
+      "name": "Austria",
+      "group": "J",
+      "flag": "🇦🇹",
+      "elo": 1820
+    },
+    {
+      "code": "JORDANIA",
+      "name": "Jordania",
+      "group": "J",
+      "flag": "🇯🇴",
+      "elo": 1620
+    },
+    {
+      "code": "COLOMBIA",
+      "name": "Colombia",
+      "group": "K",
+      "flag": "🇨🇴",
+      "elo": 1910
+    },
+    {
+      "code": "CONGO",
+      "name": "Congo",
+      "group": "K",
+      "flag": "🇨🇬",
+      "elo": 1580
+    },
+    {
+      "code": "PORTUGAL",
+      "name": "Portugal",
+      "group": "K",
+      "flag": "🇵🇹",
+      "elo": 2000
+    },
+    {
+      "code": "UZBEKISTAN",
+      "name": "Uzbekistán",
+      "group": "K",
+      "flag": "🇺🇿",
+      "elo": 1660
+    },
+    {
+      "code": "CROACIA",
+      "name": "Croacia",
+      "group": "L",
+      "flag": "🇭🇷",
+      "elo": 1920
+    },
+    {
+      "code": "GHANA",
+      "name": "Ghana",
+      "group": "L",
+      "flag": "🇬🇭",
+      "elo": 1710
+    },
+    {
+      "code": "INGLATERRA",
+      "name": "Inglaterra",
+      "group": "L",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "elo": 1970
+    },
+    {
+      "code": "PANAMA",
+      "name": "Panamá",
+      "group": "L",
+      "flag": "🇵🇦",
+      "elo": 1660
+    }
+  ],
+  "players": [
+    "David",
+    "Matias",
+    "Polo",
+    "Patron",
+    "Otto",
+    "Yezid",
+    "Mayra"
+  ],
+  "predictions": {
+    "David": {
+      "A": [
+        "CHEQUIA",
+        "COREA",
+        "MEXICO",
+        "SUDAFRICA"
+      ],
+      "B": [
+        "SUIZA",
+        "BOSNIA",
+        "CANADA",
+        "QATAR"
+      ],
+      "C": [
+        "BRASIL",
+        "MARRUECOS",
+        "ESCOCIA",
+        "HAITI"
+      ],
+      "D": [
+        "TURQUIA",
+        "EEUU",
+        "PARAGUAY",
+        "AUSTRALIA"
+      ],
+      "E": [
+        "ALEMANIA",
+        "ECUADOR",
+        "CDMARFIL",
+        "CURAZAO"
+      ],
+      "F": [
+        "JAPON",
+        "HOLANDA",
+        "SUECIA",
+        "TUNEZ"
+      ],
+      "G": [
+        "BELGICA",
+        "EGIPTO",
+        "NZELANDA",
+        "IRAN"
+      ],
+      "H": [
+        "ESPAÑA",
+        "SAUDITA",
+        "URUGUAY",
+        "CABOVERDE"
+      ],
+      "I": [
+        "NORUEGA",
+        "SENEGAL",
+        "FRANCIA",
+        "IRAK"
+      ],
+      "J": [
+        "ARGENTINA",
+        "AUSTRIA",
+        "JORDANIA",
+        "ARGELIA"
+      ],
+      "K": [
+        "COLOMBIA",
+        "PORTUGAL",
+        "CONGO",
+        "UZBEKISTAN"
+      ],
+      "L": [
+        "CROACIA",
+        "INGLATERRA",
+        "GHANA",
+        "PANAMA"
+      ]
+    },
+    "Matias": {
+      "A": [
+        "MEXICO",
+        "CHEQUIA",
+        "COREA",
+        "SUDAFRICA"
+      ],
+      "B": [
+        "SUIZA",
+        "CANADA",
+        "BOSNIA",
+        "QATAR"
+      ],
+      "C": [
+        "BRASIL",
+        "ESCOCIA",
+        "MARRUECOS",
+        "HAITI"
+      ],
+      "D": [
+        "TURQUIA",
+        "PARAGUAY",
+        "EEUU",
+        "AUSTRALIA"
+      ],
+      "E": [
+        "CDMARFIL",
+        "ALEMANIA",
+        "ECUADOR",
+        "CURAZAO"
+      ],
+      "F": [
+        "HOLANDA",
+        "JAPON",
+        "SUECIA",
+        "TUNEZ"
+      ],
+      "G": [
+        "BELGICA",
+        "NZELANDA",
+        "EGIPTO",
+        "IRAN"
+      ],
+      "H": [
+        "ESPAÑA",
+        "URUGUAY",
+        "SAUDITA",
+        "CABOVERDE"
+      ],
+      "I": [
+        "NORUEGA",
+        "FRANCIA",
+        "SENEGAL",
+        "IRAK"
+      ],
+      "J": [
+        "ARGENTINA",
+        "ARGELIA",
+        "AUSTRIA",
+        "JORDANIA"
+      ],
+      "K": [
+        "COLOMBIA",
+        "PORTUGAL",
+        "CONGO",
+        "UZBEKISTAN"
+      ],
+      "L": [
+        "INGLATERRA",
+        "CROACIA",
+        "GHANA",
+        "PANAMA"
+      ]
+    },
+    "Polo": {
+      "A": [
+        "CHEQUIA",
+        "MEXICO",
+        "COREA",
+        "SUDAFRICA"
+      ],
+      "B": [
+        "SUIZA",
+        "BOSNIA",
+        "CANADA",
+        "QATAR"
+      ],
+      "C": [
+        "MARRUECOS",
+        "BRASIL",
+        "ESCOCIA",
+        "HAITI"
+      ],
+      "D": [
+        "TURQUIA",
+        "PARAGUAY",
+        "EEUU",
+        "AUSTRALIA"
+      ],
+      "E": [
+        "ALEMANIA",
+        "CDMARFIL",
+        "ECUADOR",
+        "CURAZAO"
+      ],
+      "F": [
+        "JAPON",
+        "SUECIA",
+        "HOLANDA",
+        "TUNEZ"
+      ],
+      "G": [
+        "BELGICA",
+        "EGIPTO",
+        "NZELANDA",
+        "IRAN"
+      ],
+      "H": [
+        "ESPAÑA",
+        "SAUDITA",
+        "CABOVERDE",
+        "URUGUAY"
+      ],
+      "I": [
+        "FRANCIA",
+        "NORUEGA",
+        "SENEGAL",
+        "IRAK"
+      ],
+      "J": [
+        "ARGENTINA",
+        "AUSTRIA",
+        "ARGELIA",
+        "JORDANIA"
+      ],
+      "K": [
+        "PORTUGAL",
+        "COLOMBIA",
+        "CONGO",
+        "UZBEKISTAN"
+      ],
+      "L": [
+        "INGLATERRA",
+        "CROACIA",
+        "GHANA",
+        "PANAMA"
+      ]
+    },
+    "Patron": {
+      "A": [
+        "MEXICO",
+        "COREA",
+        "CHEQUIA",
+        "SUDAFRICA"
+      ],
+      "B": [
+        "CANADA",
+        "BOSNIA",
+        "SUIZA",
+        "QATAR"
+      ],
+      "C": [
+        "MARRUECOS",
+        "BRASIL",
+        "ESCOCIA",
+        "HAITI"
+      ],
+      "D": [
+        "TURQUIA",
+        "EEUU",
+        "PARAGUAY",
+        "AUSTRALIA"
+      ],
+      "E": [
+        "ALEMANIA",
+        "CDMARFIL",
+        "ECUADOR",
+        "CURAZAO"
+      ],
+      "F": [
+        "JAPON",
+        "HOLANDA",
+        "SUECIA",
+        "TUNEZ"
+      ],
+      "G": [
+        "BELGICA",
+        "EGIPTO",
+        "NZELANDA",
+        "IRAN"
+      ],
+      "H": [
+        "ESPAÑA",
+        "URUGUAY",
+        "SAUDITA",
+        "CABOVERDE"
+      ],
+      "I": [
+        "FRANCIA",
+        "NORUEGA",
+        "SENEGAL",
+        "IRAK"
+      ],
+      "J": [
+        "ARGENTINA",
+        "AUSTRIA",
+        "ARGELIA",
+        "JORDANIA"
+      ],
+      "K": [
+        "PORTUGAL",
+        "COLOMBIA",
+        "UZBEKISTAN",
+        "CONGO"
+      ],
+      "L": [
+        "CROACIA",
+        "INGLATERRA",
+        "GHANA",
+        "PANAMA"
+      ]
+    },
+    "Otto": {
+      "A": [
+        "MEXICO",
+        "CHEQUIA",
+        "COREA",
+        "SUDAFRICA"
+      ],
+      "B": [
+        "SUIZA",
+        "CANADA",
+        "BOSNIA",
+        "QATAR"
+      ],
+      "C": [
+        "BRASIL",
+        "MARRUECOS",
+        "ESCOCIA",
+        "HAITI"
+      ],
+      "D": [
+        "EEUU",
+        "TURQUIA",
+        "PARAGUAY",
+        "AUSTRALIA"
+      ],
+      "E": [
+        "ALEMANIA",
+        "ECUADOR",
+        "CDMARFIL",
+        "CURAZAO"
+      ],
+      "F": [
+        "HOLANDA",
+        "SUECIA",
+        "JAPON",
+        "TUNEZ"
+      ],
+      "G": [
+        "BELGICA",
+        "EGIPTO",
+        "NZELANDA",
+        "IRAN"
+      ],
+      "H": [
+        "ESPAÑA",
+        "URUGUAY",
+        "SAUDITA",
+        "CABOVERDE"
+      ],
+      "I": [
+        "FRANCIA",
+        "NORUEGA",
+        "SENEGAL",
+        "IRAK"
+      ],
+      "J": [
+        "ARGENTINA",
+        "AUSTRIA",
+        "ARGELIA",
+        "JORDANIA"
+      ],
+      "K": [
+        "PORTUGAL",
+        "COLOMBIA",
+        "CONGO",
+        "UZBEKISTAN"
+      ],
+      "L": [
+        "CROACIA",
+        "GHANA",
+        "INGLATERRA",
+        "PANAMA"
+      ]
+    },
+    "Yezid": {
+      "A": [
+        "COREA",
+        "CHEQUIA",
+        "MEXICO",
+        "SUDAFRICA"
+      ],
+      "B": [
+        "BOSNIA",
+        "CANADA",
+        "QATAR",
+        "SUIZA"
+      ],
+      "C": [
+        "BRASIL",
+        "MARRUECOS",
+        "ESCOCIA",
+        "HAITI"
+      ],
+      "D": [
+        "PARAGUAY",
+        "EEUU",
+        "TURQUIA",
+        "AUSTRALIA"
+      ],
+      "E": [
+        "ECUADOR",
+        "ALEMANIA",
+        "CDMARFIL",
+        "CURAZAO"
+      ],
+      "F": [
+        "TUNEZ",
+        "JAPON",
+        "SUECIA",
+        "HOLANDA"
+      ],
+      "G": [
+        "BELGICA",
+        "EGIPTO",
+        "NZELANDA",
+        "IRAN"
+      ],
+      "H": [
+        "ESPAÑA",
+        "URUGUAY",
+        "SAUDITA",
+        "CABOVERDE"
+      ],
+      "I": [
+        "FRANCIA",
+        "SENEGAL",
+        "NORUEGA",
+        "IRAK"
+      ],
+      "J": [
+        "ARGENTINA",
+        "AUSTRIA",
+        "JORDANIA",
+        "ARGELIA"
+      ],
+      "K": [
+        "COLOMBIA",
+        "PORTUGAL",
+        "CONGO",
+        "UZBEKISTAN"
+      ],
+      "L": [
+        "GHANA",
+        "INGLATERRA",
+        "CROACIA",
+        "PANAMA"
+      ]
+    },
+    "Mayra": {
+      "A": [
+        "COREA",
+        "SUDAFRICA",
+        "CHEQUIA",
+        "MEXICO"
+      ],
+      "B": [
+        "CANADA",
+        "BOSNIA",
+        "SUIZA",
+        "QATAR"
+      ],
+      "C": [
+        "BRASIL",
+        "MARRUECOS",
+        "ESCOCIA",
+        "HAITI"
+      ],
+      "D": [
+        "PARAGUAY",
+        "TURQUIA",
+        "EEUU",
+        "AUSTRALIA"
+      ],
+      "E": [
+        "ECUADOR",
+        "ALEMANIA",
+        "CDMARFIL",
+        "CURAZAO"
+      ],
+      "F": [
+        "SUECIA",
+        "JAPON",
+        "HOLANDA",
+        "TUNEZ"
+      ],
+      "G": [
+        "BELGICA",
+        "EGIPTO",
+        "NZELANDA",
+        "IRAN"
+      ],
+      "H": [
+        "ESPAÑA",
+        "URUGUAY",
+        "SAUDITA",
+        "CABOVERDE"
+      ],
+      "I": [
+        "FRANCIA",
+        "SENEGAL",
+        "NORUEGA",
+        "IRAK"
+      ],
+      "J": [
+        "ARGENTINA",
+        "JORDANIA",
+        "ARGELIA",
+        "AUSTRIA"
+      ],
+      "K": [
+        "COLOMBIA",
+        "PORTUGAL",
+        "CONGO",
+        "UZBEKISTAN"
+      ],
+      "L": [
+        "INGLATERRA",
+        "GHANA",
+        "CROACIA",
+        "PANAMA"
+      ]
+    }
+  },
+  "tiebreaks": {
+    "David": [
+      "J",
+      "I"
+    ],
+    "Matias": [
+      "H",
+      "A"
+    ],
+    "Polo": [
+      "G",
+      "C"
+    ],
+    "Patron": [
+      "J",
+      "C"
+    ],
+    "Otto": [
+      "I",
+      "C"
+    ],
+    "Yezid": [
+      "K",
+      "H"
+    ],
+    "Mayra": [
+      "L",
+      "E"
+    ]
+  }
+}
