@@ -10,9 +10,21 @@ vivo, leaderboard y **probabilidades en tiempo real** (Elo + Monte Carlo).
 - **Desempate:** entre empatados, gana quien tenga el grupo del goleador real
   entre sus 2 elegidos.
 
+🔗 **En vivo:** https://pollanow.vercel.app
+
+## 📸 Capturas
+
+| Inicio — leaderboard + prob. de ganar la polla | Grupos — tabla real vs. apuesta de cada uno |
+|:---:|:---:|
+| [![Inicio](docs/screenshots/home.png)](docs/screenshots/home.png) | [![Grupos](docs/screenshots/grupos.png)](docs/screenshots/grupos.png) |
+
+| Apuestas — bracket por persona | Móvil (responsive) |
+|:---:|:---:|
+| [![Apuestas](docs/screenshots/apuestas.png)](docs/screenshots/apuestas.png) | <img src="docs/screenshots/mobile.png" width="300" alt="Vista móvil"> |
+
 ## Stack
 
-- **Next.js 15** (App Router, TS) + **Tailwind** — UI responsive (PC/móvil).
+- **Next.js 16** (App Router, TS) + **Tailwind** — UI responsive (PC/móvil).
 - **Supabase** (Postgres + Realtime) — datos en vivo que se empujan al cliente.
 - **football-data.org** — fixtures y resultados del Mundial (adaptador
   intercambiable en `lib/api/`).
@@ -21,19 +33,48 @@ vivo, leaderboard y **probabilidades en tiempo real** (Elo + Monte Carlo).
 
 ## Cómo funciona
 
-```
-Cron (cada ~5 min)  →  /api/cron/sync
-   1. football-data.org → upsert de partidos
-   2. recalcula tablas reales (reglas FIFA intra-grupo)
-   3. recalcula puntos + desempate (leaderboard)
-   4. simula Monte Carlo con Elo → prob. de acertar cada grupo y de ganar la polla
-   5. escribe en Supabase → Realtime refresca la UI sola
+### Flujo de datos
+
+Un cron externo (cada ~3 min) dispara el sync; los resultados se procesan y se
+guardan en Supabase, que **empuja** los cambios a cada navegador abierto al
+instante (Realtime).
+
+```mermaid
+flowchart LR
+  API["⚽ football-data.org<br/>(resultados)"] -->|cron ~3 min| SYNC["/api/cron/sync"]
+  subgraph compute["Cálculo (lib/, puro y testeado)"]
+    ST["computeStandings<br/>tablas reales"]
+    SC["computeLeaderboard<br/>+10/grupo + desempate"]
+    MC["runMonteCarlo<br/>Elo + simulación"]
+  end
+  SYNC --> ST --> SC --> MC
+  MC --> DB[("🗄️ Supabase<br/>Postgres")]
+  DB -->|"Realtime (~1s)"| UI["📱 Navegador<br/>de cada amigo"]
+  SEED["data/seed.json<br/>(apuestas del Excel)"] -.estructura.-> UI
 ```
 
-La estructura (grupos, equipos, apuestas) vive en `data/seed.json`, generado del
-Excel original con `scripts/build_seed.py`. **La app funciona sin Supabase**
-(muestra las apuestas y un calendario vacío); los datos en vivo aparecen cuando
-configuras la base.
+La **estructura** (grupos, equipos, apuestas) vive en `data/seed.json`, generado
+del Excel con `scripts/build_seed.py` y no cambia. Solo lo **dinámico**
+(partidos, tablas, puntos, probabilidades) vive en Supabase.
+
+### Cómo se calculan las probabilidades
+
+Cada equipo tiene un rating **Elo**. Con él se estima la probabilidad de cada
+resultado y se **simulan miles de veces** los partidos que faltan (los ya
+jugados se fijan con su marcador real). Contando los resultados de esas
+simulaciones se obtienen las dos probabilidades que ves en la app.
+
+```mermaid
+flowchart TD
+  ELO["Elo de cada equipo"] --> PR["Prob. de cada resultado<br/>(modelo Poisson)"]
+  PLAY["Resultados ya jugados<br/>(fijos)"] --> SIM
+  PR --> SIM["Simular N veces los<br/>partidos restantes de cada grupo"]
+  SIM --> PH["p_hit<br/>prob. de acertar el orden 1-4<br/>de cada grupo (por persona)"]
+  SIM --> PW["p_win<br/>prob. de ganar la polla<br/>(suma 100% entre los 7)"]
+```
+
+> A medida que se juegan partidos, hay menos por simular y las probabilidades se
+> afinan; cuando un grupo termina, su `p_hit` es 0% o 100%.
 
 ## Puesta en marcha local
 
