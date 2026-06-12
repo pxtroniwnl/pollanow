@@ -1,14 +1,6 @@
 import type { MatchView } from "@/lib/data";
+import { kickoffLabel } from "@/lib/format";
 import { StatusBadge } from "./ui";
-
-function kickoffLabel(iso: string): string {
-  if (!iso) return "";
-  const d = new Date(iso);
-  return d.toLocaleString("es", {
-    weekday: "short", day: "numeric", month: "short",
-    hour: "2-digit", minute: "2-digit",
-  });
-}
 
 export function MatchCard({ match }: { match: MatchView }) {
   const finished = match.status === "FINISHED";
