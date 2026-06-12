@@ -11,7 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "seed:build": "tsx scripts/build-seed.ts",
-    "seed:load": "tsx scripts/seed.ts"
+    "seed:load": "tsx scripts/seed.ts",
+    "check": "tsx scripts/healthcheck.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
