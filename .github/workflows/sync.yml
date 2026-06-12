@@ -1,0 +1,23 @@
+# Disparador frecuente del sync, independiente de cron-job.org (que se cayó el
+# día inaugural). GitHub Actions permite mínimo cada 5 min; el cron diario de
+# Vercel queda como respaldo. Requiere el secreto CRON_SECRET en
+# Settings -> Secrets and variables -> Actions.
+# Desactivar este workflow cuando termine la fase de grupos (~27 jun 2026).
+name: Sync resultados
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Llamar /api/cron/sync
+        run: |
+          code=$(curl -s -o body.json -w '%{http_code}' -X POST \
+            https://pollanow.vercel.app/api/cron/sync \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}")
+          cat body.json; echo
+          test "$code" = "200"
