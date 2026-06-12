@@ -3,6 +3,7 @@
 // Datos en vivo (matches/standings/scoring/probabilidades) desde Supabase si
 // esta configurado; si no, quedan vacios y la UI lo indica.
 import seed from "@/data/seed.json";
+import { scheduleAutoSync } from "@/lib/auto-sync";
 import { createReadClient } from "@/lib/supabase/server";
 import type { GroupId } from "@/lib/types";
 
@@ -138,6 +139,7 @@ export async function getAppData(): Promise<AppData> {
     } catch {
       live = false;
     }
+    scheduleAutoSync(meta.lastSync);
   }
 
   // Orden del leaderboard: por rank si hay datos, si no alfabetico.
